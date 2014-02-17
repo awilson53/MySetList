@@ -62,6 +62,20 @@ namespace MySetList.Controllers
             return View(chordchart);
         }
 
+        public ActionResult EnterSongChart()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EnterSongChart(ChordChart chordChart)
+        {
+
+
+            return View(chordChart);
+        }
+
         // GET: /ChordChart/Upload
         public ActionResult Upload()
         {

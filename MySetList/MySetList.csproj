@@ -315,6 +315,7 @@
     <Content Include="Views\ChordChart\Edit.cshtml" />
     <Content Include="Views\ChordChart\Delete.cshtml" />
     <Content Include="Views\ChordChart\Upload.cshtml" />
+    <Content Include="Views\ChordChart\EnterSongChart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

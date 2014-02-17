@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MySetList.Controllers;
 
 namespace MySetList.Tests.Controllers
 {
@@ -10,7 +11,7 @@ namespace MySetList.Tests.Controllers
         [TestMethod]
         public void GetChordCharts()
         {
-            //// ChordChartController controller = new ChordChartController();
+            //ChordChartController controller = new ChordChartController();
 
             //ViewResult result = controller.GetChordCharts() as ViewResult;
 

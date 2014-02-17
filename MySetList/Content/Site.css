@@ -328,6 +328,14 @@ aside {
     font-weight: 700;
 }
 
+/* JAW Added */
+.songtextstyle {
+    width: 150px;
+    height: 300px;
+}
+
+/* End JAW Changes*/
+
 /* login page */
 #loginForm {
     border-right: solid 2px #c8c8c8;
