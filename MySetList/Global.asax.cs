@@ -16,13 +16,16 @@ namespace MySetList
     {
         protected void Application_Start()
         {
+            // Reinitialize database as model changes
+            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<MySetList.Models.ChordChartContext>());
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterAuth();
+            AuthConfig.RegisterAuth();                       
         }
     }
 }
