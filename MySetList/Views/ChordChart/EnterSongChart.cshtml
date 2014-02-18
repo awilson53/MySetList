@@ -32,8 +32,8 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.SongText)
         </div>
-        <div class="editor-songfield">
-            @Html.TextBoxFor(model => model.SongText, new { @class = "songtextstyle" })
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SongText)
             @Html.ValidationMessageFor(model => model.SongText)
         </div>
         <p>

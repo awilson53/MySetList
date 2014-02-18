@@ -71,7 +71,17 @@ namespace MySetList.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EnterSongChart(ChordChart chordChart)
         {
+            if(ModelState.IsValid)
+            {
+                var chartGuid = Guid.NewGuid();
+                chordChart.ChartID = chartGuid;
+                var storagePath = Path.Combine(Server.MapPath(CHART_STORAGE), chartGuid.ToString() + ".pdf");
 
+
+                db.ChordCharts.Add(chordChart);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
             return View(chordChart);
         }

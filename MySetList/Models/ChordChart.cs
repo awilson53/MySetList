@@ -9,10 +9,11 @@ namespace MySetList.Models
     public class ChordChart
     {
         public int ID { get; set; }
-        public string StoragePath { get; set; }
+        public string StoragePath { get; set; }        
         public string FileName { get; set; }
         public Guid ChartID { get; set; }
 
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Song Text (start chord lines with a period)")]
         public string SongText { get; set; }
         
