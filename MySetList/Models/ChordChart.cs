@@ -10,7 +10,7 @@ namespace MySetList.Models
     {
         public int ID { get; set; }
         public string StoragePath { get; set; }        
-        public string FileName { get; set; }
+        public string OriginalFileName { get; set; }
         public Guid ChartID { get; set; }
 
         [DataType(DataType.MultilineText)]

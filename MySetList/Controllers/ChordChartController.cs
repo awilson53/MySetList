@@ -75,8 +75,12 @@ namespace MySetList.Controllers
             {
                 var chartGuid = Guid.NewGuid();
                 chordChart.ChartID = chartGuid;
+                
                 var storagePath = Path.Combine(Server.MapPath(CHART_STORAGE), chartGuid.ToString() + ".pdf");
+                chordChart.StoragePath = storagePath;
 
+                //todo: need to sanitize the file name before we store it (safeguard against slashes, etc)
+                chordChart.OriginalFileName = chordChart.SongTitle + ".pdf";
 
                 db.ChordCharts.Add(chordChart);
                 db.SaveChanges();
@@ -112,7 +116,7 @@ namespace MySetList.Controllers
                 // record chart to database
                 var newChart = new ChordChart();
                 newChart.ChartID = chartGuid;
-                newChart.FileName = file.FileName;
+                newChart.OriginalFileName = file.FileName;
                 newChart.StoragePath = Server.MapPath(CHART_STORAGE) + chartGuid.ToString() + ".pdf";
                 db.ChordCharts.Add(newChart);
                 db.SaveChanges();                

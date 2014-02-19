@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.ChartID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FileName)
+            @Html.DisplayNameFor(model => model.OriginalFileName)
         </th>
         <th></th>
     </tr>
@@ -32,7 +32,7 @@
             @Html.DisplayFor(modelItem => item.ChartID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FileName)
+            @Html.DisplayFor(modelItem => item.OriginalFileName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
