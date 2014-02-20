@@ -22,5 +22,8 @@ namespace MySetList.Models
 
         [Display(Name = "Song Title")]
         public string SongTitle { get; set; }
+
+        [Display(Name = "Associated Set Lists")]
+        public virtual ICollection<SetList> AssociatedSetlist { get; set; }
     }
 }

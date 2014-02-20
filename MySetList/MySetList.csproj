@@ -196,6 +196,9 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ChordChart.cs" />
     <Compile Include="Models\ChordChartContext.cs" />
+    <Compile Include="Models\SetList.cs" />
+    <Compile Include="Models\SetListContext.cs" />
+    <Compile Include="Controllers\SetListController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +319,11 @@
     <Content Include="Views\ChordChart\Delete.cshtml" />
     <Content Include="Views\ChordChart\Upload.cshtml" />
     <Content Include="Views\ChordChart\EnterSongChart.cshtml" />
+    <Content Include="Views\SetList\Index.cshtml" />
+    <Content Include="Views\SetList\Details.cshtml" />
+    <Content Include="Views\SetList\Create.cshtml" />
+    <Content Include="Views\SetList\Edit.cshtml" />
+    <Content Include="Views\SetList\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

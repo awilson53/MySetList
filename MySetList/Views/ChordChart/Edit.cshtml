@@ -14,29 +14,29 @@
         <legend>ChordChart</legend>
 
         @Html.HiddenFor(model => model.ID)
-
+                
         <div class="editor-label">
-            @Html.LabelFor(model => model.StoragePath)
+            @Html.LabelFor(model => model.SongTitle)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.StoragePath)
-            @Html.ValidationMessageFor(model => model.StoragePath)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ChartID)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ChartID)
-            @Html.ValidationMessageFor(model => model.ChartID)
+            @Html.EditorFor(model => model.SongTitle)
+            @Html.ValidationMessageFor(model => model.SongTitle)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.OriginalFileName)            
+            @Html.LabelFor(model => model.ArtistName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.OriginalFileName)
-            @Html.ValidationMessageFor(model => model.OriginalFileName)
+            @Html.EditorFor(model => model.ArtistName)
+            @Html.ValidationMessageFor(model => model.ArtistName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SongText)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SongText)
+            @Html.ValidationMessageFor(model => model.SongText)
         </div>
 
         <p>

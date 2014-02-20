@@ -1,0 +1,22 @@
+﻿@model MySetList.Models.SetList
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SetList</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SetListName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SetListName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
