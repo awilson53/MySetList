@@ -24,9 +24,30 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.SetListName)
         </div>
-        <div class="editor-field">
+        @*<div class="editor-field">
             @Html.DropDownListFor(model => model.ID, Model.ChordCharts)
-        </div>
+        </div>*@
+
+        <!-- JAW picker class -->
+        <section class="multiSelector">
+            <div>
+                <select id="leftValues" size="5" multiple>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+            <div>
+                <input type="button" id="btnLeft" value="&lt;&lt;" />
+                <input type="button" id="btnRight" value="&gt;&gt;" />
+            </div>
+            <div>
+                <select id="rightValues" size="4" multiple>                    
+                </select>
+            </div>
+        </section>
+        <!-- End JAW picker class-->
+
         <p>
             <input type="submit" value="Create" />
         </p>
@@ -39,4 +60,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/multiSelector.js")
 }
