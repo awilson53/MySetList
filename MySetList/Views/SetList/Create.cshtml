@@ -29,9 +29,13 @@
         </div>*@
 
         <!-- JAW picker class -->
-        <section class="multiSelector">
+        <div class="ccEditor">
+            @Html.ListBox("Chord Charts", ViewData["CCList"] as MultiSelectList)
+        </div>
+
+        @*<section class="chordChartSelector">
             <div>
-                <select id="leftValues" size="5" multiple>
+                <select id="leftValues" size="5" class="selectBox" multiple>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -42,10 +46,9 @@
                 <input type="button" id="btnRight" value="&gt;&gt;" />
             </div>
             <div>
-                <select id="rightValues" size="4" multiple>                    
-                </select>
+                <select id="rightValues" size="5" class="selectBox" multiple></select>
             </div>
-        </section>
+        </section>*@
         <!-- End JAW picker class-->
 
         <p>

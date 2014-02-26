@@ -11,6 +11,7 @@ namespace MySetList.Models
     public class SetListController : Controller
     {
         private SetListContext db = new SetListContext();
+        private ChordChartContext ccdb = new ChordChartContext();
 
         //
         // GET: /SetList/
@@ -38,6 +39,8 @@ namespace MySetList.Models
 
         public ActionResult Create()
         {
+            ViewData["CCList"] = GetAvailableChordCharts();
+
             return View();
         }
 
@@ -117,6 +120,11 @@ namespace MySetList.Models
         {
             db.Dispose();
             base.Dispose(disposing);
+        }
+
+        private MultiSelectList GetAvailableChordCharts()
+        {
+            return new MultiSelectList(ccdb.ChordCharts.ToList(), "ID", "SongTitle");
         }
     }
 }

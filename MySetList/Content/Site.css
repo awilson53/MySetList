@@ -328,26 +328,22 @@ aside {
     font-weight: 700;
 }
 
-/* JAW Added */
-.lyricsStyle {
-    width: 400px;
-    height: 800px;
-}
+/* JAW Added */ 
 
-SELECT, INPUT[type="text"] {
+.selectBox {
     width: 160px;
     box-sizing: border-box;
 }
-SECTION {
+.chordChartSelector {
     padding: 8px;
     background-color: #f0f0f0;
     overflow: auto;
 }
-SECTION > DIV {
+.chordChartSelector > DIV {
     float: left;
     padding: 4px;
 }
-SECTION > DIV + DIV {
+.chordChartSelector > DIV + DIV {
     width: 40px;
     text-align: center;
 }
